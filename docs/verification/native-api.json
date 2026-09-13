@@ -1,0 +1,109 @@
+{
+  "source": {
+    "format": 1,
+    "channels": 2,
+    "rate": 44100,
+    "bits": 16,
+    "frames": 220500
+  },
+  "jobs": [
+    {
+      "format": "clap",
+      "gain": 0.5,
+      "status": 200,
+      "contentType": "audio/wav",
+      "bytes": 1764044,
+      "output": {
+        "format": 3,
+        "channels": 2,
+        "rate": 44100,
+        "bits": 32,
+        "frames": 220500
+      },
+      "maxAbsoluteSampleError": 0,
+      "nonFiniteSamples": 0,
+      "sha256": "e24292a83ea129173eda2f40cd3e1c8988776264fadc2878d713af67086bcffc"
+    },
+    {
+      "format": "clap",
+      "gain": 0.25,
+      "status": 200,
+      "contentType": "audio/wav",
+      "bytes": 1764044,
+      "output": {
+        "format": 3,
+        "channels": 2,
+        "rate": 44100,
+        "bits": 32,
+        "frames": 220500
+      },
+      "maxAbsoluteSampleError": 0,
+      "nonFiniteSamples": 0,
+      "sha256": "48b66527faee19d917cb98297f821d7f9f83a06989a3ef9f040a8ad30dff8a7a"
+    },
+    {
+      "format": "vst3",
+      "gain": 0.5,
+      "status": 200,
+      "contentType": "audio/wav",
+      "bytes": 1764044,
+      "output": {
+        "format": 3,
+        "channels": 2,
+        "rate": 44100,
+        "bits": 32,
+        "frames": 220500
+      },
+      "maxAbsoluteSampleError": 0,
+      "nonFiniteSamples": 0,
+      "sha256": "e24292a83ea129173eda2f40cd3e1c8988776264fadc2878d713af67086bcffc"
+    },
+    {
+      "format": "vst3",
+      "gain": 0.25,
+      "status": 200,
+      "contentType": "audio/wav",
+      "bytes": 1764044,
+      "output": {
+        "format": 3,
+        "channels": 2,
+        "rate": 44100,
+        "bits": 32,
+        "frames": 220500
+      },
+      "maxAbsoluteSampleError": 0,
+      "nonFiniteSamples": 0,
+      "sha256": "48b66527faee19d917cb98297f821d7f9f83a06989a3ef9f040a8ad30dff8a7a"
+    }
+  ],
+  "plugins": {
+    "status": 200,
+    "body": {
+      "plugins": [
+        {
+          "id": "test-clap",
+          "name": "Auralis test CLAP gain",
+          "format": "clap"
+        },
+        {
+          "id": "test-vst3",
+          "name": "Auralis test VST3 gain",
+          "format": "vst3"
+        }
+      ],
+      "ddp": true
+    }
+  },
+  "ddp": {
+    "status": 200,
+    "contentType": "application/zip",
+    "bytes": 1237030,
+    "sha256": "869e59b4ddab47142304d3beb8909711bf44e34b58efe862bd29a622978153ea"
+  },
+  "crossOrigin": {
+    "status": 403,
+    "body": {
+      "error": "Cross-origin native request rejected."
+    }
+  }
+}

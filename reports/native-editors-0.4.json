@@ -1,0 +1,9 @@
+{
+  "timestamp": "2026-09-13T05:10:19.980229+00:00",
+  "display": "virtual X11 (Xvfb)",
+  "physicalGPUQualified": false,
+  "commercialPluginsTested": false,
+  "exitCode": 0,
+  "stdout": "\u2714 clap saved state round trip, parameter override and wrong-identity rejection (22.676174ms)\n\u2714 clap native X11 editor gesture persists DSP and reopens state (252.874886ms)\n\u2714 vst3 saved state round trip, parameter override and wrong-identity rejection (19.649335ms)\n\u2714 vst3 native X11 editor gesture persists DSP and reopens state (266.532083ms)\n\u2139 tests 4\n\u2139 suites 0\n\u2139 pass 4\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 642.7329\n",
+  "stderr": ""
+}

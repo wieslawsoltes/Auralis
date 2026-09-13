@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1789242239921,
+      "tag": "0000_glorious_lily_hollister",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1789244171839,
+      "tag": "0001_yielding_professor_monster",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1789244581072,
+      "tag": "0002_salty_switch",
+      "breakpoints": true
+    }
+  ]
+}

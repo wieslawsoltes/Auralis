@@ -1,0 +1,46 @@
+{
+  "renderer": "Official PyPI ear 2.1.0",
+  "strict": true,
+  "fail_on_overload": true,
+  "outputs": [
+    {
+      "name": "riff-48k",
+      "frames": 48017,
+      "channels": 2,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "finite": true,
+      "peak": 0.059150106805575704,
+      "audio_sha256": "d90b2f1bac9224c9b483d3ea7197839c0b7084884899b401399535dbbf6b84a5",
+      "file_sha256": "30e90ac1d0615cc73e9b0d4bee05eaf9adcc4e953687760b08283ca1105bb9d4"
+    },
+    {
+      "name": "bw64-48k",
+      "frames": 48017,
+      "channels": 2,
+      "sample_rate": 48000,
+      "bit_depth": 24,
+      "finite": true,
+      "peak": 0.059150106805575704,
+      "audio_sha256": "d90b2f1bac9224c9b483d3ea7197839c0b7084884899b401399535dbbf6b84a5",
+      "file_sha256": "30e90ac1d0615cc73e9b0d4bee05eaf9adcc4e953687760b08283ca1105bb9d4"
+    },
+    {
+      "name": "riff-96k",
+      "frames": 96011,
+      "channels": 2,
+      "sample_rate": 96000,
+      "bit_depth": 24,
+      "finite": true,
+      "peak": 0.0070710190619252995,
+      "audio_sha256": "6f880d36ab724f26efe3387f056aac967d011874128721a69778f108ec5b44ea",
+      "file_sha256": "2ab46d2fd03ceec9ca6ec16e004104f116a78b04a9664db1e75c0c784899ccb7"
+    }
+  ],
+  "riff_bw64_render_equal": true,
+  "source_file_sha256": {
+    "riff-48k": "af3765ca8ba58cc96001d76b03012e5fc9175a51a50129ecbb4010022ce54a16",
+    "bw64-48k": "fe308eae819e1b65dabdccfcab52c52e38017327195f82a605d631c01b3e8f57",
+    "riff-96k": "76147d98a939942e939ad43e570b7951b820a9025dffc0ecca9fdb56f07bcda8"
+  }
+}

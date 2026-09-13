@@ -1,0 +1,17 @@
+{
+  "kind": "local SQLite API concurrency",
+  "node": "v24.19.0",
+  "operations": 128,
+  "concurrency": 8,
+  "elapsedMs": 813.613934,
+  "operationsPerSecond": 157.32277269479508,
+  "retryCount": 124,
+  "p50Ms": 24.049259000000006,
+  "p95Ms": 45.278170000000046,
+  "peakRSS": 90316800,
+  "retainedMarkers": 131,
+  "finalRevision": 129,
+  "receipts": 128,
+  "audits": 128,
+  "productionQualification": false
+}

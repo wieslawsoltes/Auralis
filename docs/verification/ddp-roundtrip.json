@@ -1,0 +1,41 @@
+{
+  "source_frames": 220500,
+  "roundtrip_frames": 220500,
+  "ddp_raw_frames": 308700,
+  "ddp_first_2sec_zero": true,
+  "ddp_after_pregap_equals_source": true,
+  "roundtrip_pcm_equal": true,
+  "source_pcm_sha256": "2aee10c73201a5dcdb748227df60175bd41ae4516f54d3a6d690cd5daf732380",
+  "roundtrip_pcm_sha256": "2aee10c73201a5dcdb748227df60175bd41ae4516f54d3a6d690cd5daf732380",
+  "ddp_files": {
+    "DDPID": {
+      "size": 128,
+      "sha256": "581965195fbd29b308009de2d27c5b3ff5348c214783b2d6a6ebf073eb636b6c"
+    },
+    "CDTEXT.BIN": {
+      "size": 126,
+      "sha256": "38713f32dc3aed80eeb6fe0f75cf8b70f559261058d72c0b369ee2272ac16acc"
+    },
+    "DDPMS": {
+      "size": 384,
+      "sha256": "7c63267e1d2c647e008c40893f335ca5b979de2f35e451a2d46051af0d6351dd"
+    },
+    "CHECKSUM.TXT": {
+      "size": 98,
+      "sha256": "308e50ad8485ab6db917ba15bb36123a8f0d5bd13af5d9bca764704dcfaf2401"
+    },
+    "IMAGE.DAT": {
+      "size": 1234800,
+      "sha256": "d207ee916ae30f2a2bcd583cfcf3ddf422af7b3be637d7c90c4613a1bf19da09"
+    },
+    "SD": {
+      "size": 320,
+      "sha256": "f1fd911a9038ef8d9ffe6d1010577acbb69bb078f1ff41c2f08ccdf70fa49488"
+    },
+    "CHECKSUM.MD5": {
+      "size": 206,
+      "sha256": "9122e277a421c7caadaba26470347320c0bd46efe3867cd86287aaa6b13dac7b"
+    }
+  },
+  "roundtrip_cue": "TITLE \"Auralis Fixture\"\nPERFORMER \"Auralis\"\nFILE \"roundtrip.wav\" WAVE\n  TRACK 01 AUDIO\n    TITLE \"Five Seconds\"\n    INDEX 01 00:00:00\n"
+}

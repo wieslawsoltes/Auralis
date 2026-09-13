@@ -1,0 +1,66 @@
+{
+  "zip_crc_error": null,
+  "members": {
+    "CDTEXT.BIN": {
+      "bytes": 126,
+      "sha256": "1bac08341acd6b06673405cd95a3543a9982a5f3feb13214c6a888e3fb0c6ef0"
+    },
+    "CHECKSUM.MD5": {
+      "bytes": 206,
+      "sha256": "9bcdc236141dc1d87024ada1f9fdb7a56ccee1c4355cb7a37a68fef96be31593"
+    },
+    "CHECKSUM.TXT": {
+      "bytes": 98,
+      "sha256": "acc5241ba994bdba56d0f1124ee77bc4fad86bc50705ec830fe359ccd877c91e"
+    },
+    "DDPID": {
+      "bytes": 128,
+      "sha256": "e825d608fbdfdc1040dd839a1d1339d7057fd76376a8a8067ef4cac14cd41a34"
+    },
+    "DDPMS": {
+      "bytes": 384,
+      "sha256": "7c63267e1d2c647e008c40893f335ca5b979de2f35e451a2d46051af0d6351dd"
+    },
+    "IMAGE.DAT": {
+      "bytes": 1234800,
+      "sha256": "d207ee916ae30f2a2bcd583cfcf3ddf422af7b3be637d7c90c4613a1bf19da09"
+    },
+    "SD": {
+      "bytes": 320,
+      "sha256": "f1fd911a9038ef8d9ffe6d1010577acbb69bb078f1ff41c2f08ccdf70fa49488"
+    },
+    "verification.txt": {
+      "bytes": 196,
+      "sha256": "4c200b555ed22359f8cbfb7d2bf1f04ffa82e70f2764f71153f2fc487e2ff97f"
+    }
+  },
+  "all_required_ddp_files": true,
+  "external_verification": [
+    {
+      "args": [
+        "--verify",
+        "/workspace/scratch/e9abf861f611/references/native-api-verification/ddp-unpacked"
+      ],
+      "returncode": 0,
+      "stdout": "\nValidating CRCs from file \"CHECKSUM.TXT\"\nDDPID: OK\nDDPMS: OK\nCDTEXT.BIN: OK\nSD: OK\nIMAGE.DAT: OK\n\nValidating MD5s from file \"CHECKSUM.MD5\"\nDDPID: OK\nDDPMS: OK\nCDTEXT.BIN: OK\nSD: OK\nIMAGE.DAT: OK\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "--wave=/workspace/scratch/e9abf861f611/references/native-api-verification/ddp-roundtrip.wav",
+        "/workspace/scratch/e9abf861f611/references/native-api-verification/ddp-unpacked"
+      ],
+      "returncode": 0,
+      "stdout": "Converting DDP image to cue/wav image.\nStart reading audio from DDP at 00:02:00 (150).\nStart writing 375 sectors to Wave file \"/workspace/scratch/e9abf861f611/references/native-api-verification/ddp-roundtrip.wav\".\nTime stamp is: 00:00:02.000 (88200 samples).\nWave file written successfully (0 seconds).\nStart writing cue sheet to file \"/workspace/scratch/e9abf861f611/references/native-api-verification/ddp-roundtrip.cue\".\nCue sheet written successfully (142 Bytes).\nTime elapsed:  0.0\n",
+      "stderr": ""
+    }
+  ],
+  "ddp_audio_frames": 308700,
+  "first_two_seconds_zero": true,
+  "audio_after_pregap_equals_source": true,
+  "roundtrip_frames": 220500,
+  "roundtrip_pcm_exact": true,
+  "source_pcm_sha256": "2aee10c73201a5dcdb748227df60175bd41ae4516f54d3a6d690cd5daf732380",
+  "roundtrip_pcm_sha256": "2aee10c73201a5dcdb748227df60175bd41ae4516f54d3a6d690cd5daf732380",
+  "server_verification_text": "\nValidating CRCs from file \"CHECKSUM.TXT\"\nDDPID: OK\nDDPMS: OK\nCDTEXT.BIN: OK\nSD: OK\nIMAGE.DAT: OK\n\nValidating MD5s from file \"CHECKSUM.MD5\"\nDDPID: OK\nDDPMS: OK\nCDTEXT.BIN: OK\nSD: OK\nIMAGE.DAT: OK\n"
+}

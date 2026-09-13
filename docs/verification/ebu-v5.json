@@ -1,0 +1,4664 @@
+{
+  "createdAt": "2026-09-12T21:01:27.648Z",
+  "audioRoot": "/workspace/sites/auralis-studio/public/modules/audio",
+  "fixtureRoot": "/workspace/scratch/auralis-dsp-fixtures/ebu-v5",
+  "sourceHashes": {
+    "wav.js": "b7f9f16d83bb537f1499baf04e4add64d6e5a58071051a08ae7c5e5514cd8902",
+    "analysis.js": "261dd9028ceddb5ed3c446ce7b980252969e1ea34cb071d887a5f402bcc0e5b6",
+    "dsp.js": "760caa8efa2f6421a65cd1d1d71d250e12e767aa39039ea6e707d9e1ef48d47e"
+  },
+  "specifications": [
+    "https://tech.ebu.ch/docs/tech/tech3341.pdf",
+    "https://tech.ebu.ch/docs/tech/tech3342.pdf"
+  ],
+  "scope": "Named supported EBU v5 cases only. Fixture audio is separately obtained and technical-testing-only. Passing does not imply certification or complete standards compliance.",
+  "summary": {
+    "files": 70,
+    "analyzed": 68,
+    "unsupported": [
+      "seq-3341-6-5channels-16bit.wav",
+      "seq-3341-6-6channels-WAVEEX-16bit.wav"
+    ],
+    "assertions": 318,
+    "passed": 318,
+    "failed": 0,
+    "errors": 0,
+    "missingFixtures": []
+  },
+  "results": [
+    {
+      "file": "1kHz Sine -20 LUFS-16bit.wav",
+      "expected": {},
+      "checks": [],
+      "sha256": "aaf4ace76363203abf0cb005fddf83a0fe979d213492e9661bbadb784bc6299a",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 960000,
+        "integrated": -19.95382080669686,
+        "momentaryMax": -19.95332576737214,
+        "shortTermMax": -19.953751206962814,
+        "loudnessRange": 0.00002176815627308315
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "1kHz Sine -26 LUFS-16bit.wav",
+      "expected": {},
+      "checks": [],
+      "sha256": "3da353df2dc6f2640886547a5285e610e36255db3519ee69ea0e4dbe6fd784cd",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 960000,
+        "integrated": -25.95382249740479,
+        "momentaryMax": -25.95329101605346,
+        "shortTermMax": -25.95374902086405,
+        "loudnessRange": 0.00004405563383613753
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "1kHz Sine -40 LUFS-16bit.wav",
+      "expected": {},
+      "checks": [],
+      "sha256": "6c4a6db9fd4372d780e438a50fe0eee63e32718b0f40cff97be403383f3d514e",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 960000,
+        "integrated": -39.99265854861315,
+        "momentaryMax": -39.992144987733255,
+        "shortTermMax": -39.99259994242568,
+        "loudnessRange": 0.00003504968780987383
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "EBU-reference_listening_signal_pinknoise_500Hz_2kHz_R128.wav",
+      "expected": {},
+      "checks": [],
+      "sha256": "d1ab57fd10a3f6381c1c7937aaaf9cf36b13f7ded956266259b2a7d5044d2351",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 1,
+        "frames": 5760000,
+        "integrated": -22.96646295144682,
+        "momentaryMax": -22.329661986959483,
+        "shortTermMax": -22.75802005202238,
+        "loudnessRange": 0.18717251502239662
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-1-16bit.wav",
+      "expected": {
+        "integrated": {
+          "value": -23,
+          "tolerance": 0.1
+        },
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        },
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "integrated",
+          "actual": -22.953554851417547,
+          "target": -23,
+          "error": 0.0464451485824533,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        },
+        {
+          "metric": "momentaryMax",
+          "actual": -22.95305085568911,
+          "target": -23,
+          "error": 0.046949144310890034,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        },
+        {
+          "metric": "shortTermMax",
+          "actual": -22.953485029908254,
+          "target": -23,
+          "error": 0.046514970091745766,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "50dff94bf941756cae2b3e1a67931a28e1605a876be1b7f3707f2ffcf485955c",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 960000,
+        "integrated": -22.953554851417547,
+        "momentaryMax": -22.95305085568911,
+        "shortTermMax": -22.953485029908254,
+        "loudnessRange": 0.000018836082162465573
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-1-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.99332994554307,
+          "target": -23,
+          "error": 0.006670054456929364,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "d8c3596d1351450229e00afc81299bc128fcb7ccd4eb6e6cc4b7963af0644103",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 192000,
+        "integrated": -23.21604863275628,
+        "momentaryMax": -22.9927825125587,
+        "shortTermMax": -22.99332994554307,
+        "loudnessRange": 1.4753546004540894
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-10-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196507,
+          "target": -23,
+          "error": 0.0066700558034931134,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "0f39a821b9d0275b799154b7466810861065084274f3344b79f8c873c0281fb6",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 256800,
+        "integrated": -23.53688412326945,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944196507,
+        "loudnessRange": 1.9354821708041214
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-11-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196617,
+          "target": -23,
+          "error": 0.006670055803382979,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "7c15c7d6e40ccb57de573aaabcf168761eebf24b7f246cbd4fb7da64decc9776",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 264000,
+        "integrated": -23.407242165579607,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944196617,
+        "loudnessRange": 2.1954546356547446
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-12-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196734,
+          "target": -23,
+          "error": 0.00667005580326574,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "7911ad106257ddb428fe5eb4e98270fd64a82e574540bad70049b2cc24b0faeb",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 271200,
+        "integrated": -23.53688412326945,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944196734,
+        "loudnessRange": 2.5871134212024636
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-13-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196855,
+          "target": -23,
+          "error": 0.0066700558031449475,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "2526684a09326f51a2bc69a0391084d05e7c76535182d8216abee3f7acb01d7e",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 278400,
+        "integrated": -23.407242165579607,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944196855,
+        "loudnessRange": 2.923076822811403
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-14-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196972,
+          "target": -23,
+          "error": 0.006670055803027708,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "6285779d85b9565dca377cc10843a73b522f497bd93b82b570249b806fc5158a",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 285600,
+        "integrated": -23.53688412326945,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944196972,
+        "loudnessRange": 3.360989887055439
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-15-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.99332994419709,
+          "target": -23,
+          "error": 0.006670055802910468,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "621d223f90471edf9487ad4fc3fb7906b2921203db1c6947c676d65d12fcef34",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 292800,
+        "integrated": -23.407242165579607,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.99332994419709,
+        "loudnessRange": 3.797495044239078
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-16-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944197132,
+          "target": -23,
+          "error": 0.006670055802867836,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "7968f978f3de277c5c70c07fe50b7db87278ef6181c70ccda21928560c66e130",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 300000,
+        "integrated": -23.53688412326945,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944197132,
+        "loudnessRange": 4.317561207752398
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-17-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944197132,
+          "target": -23,
+          "error": 0.006670055802867836,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "ee47b73e0a1ec9c6b5ebad0d6eb897f83e3b6e908e1e19b0220ef55c78895e18",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 307200,
+        "integrated": -23.407242165579607,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944197132,
+        "loudnessRange": 4.898631637241568
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-18-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944197132,
+          "target": -23,
+          "error": 0.006670055802867836,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "36e7922bfe93e95973325d6da638bf79b25f82bd17bddc2edc6771e096751d5a",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 314400,
+        "integrated": -23.53688412326945,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944197132,
+        "loudnessRange": 5.56365303763878
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-19-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.99332994419708,
+          "target": -23,
+          "error": 0.0066700558029211265,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "0d9645639c17d6102e10bcb45b7b71e6cae9bfe58216cc4dfeda6462163ce524",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 321600,
+        "integrated": -23.407242165579607,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.99332994419708,
+        "loudnessRange": 6.373986448545548
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-2-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196233,
+          "target": -23,
+          "error": 0.006670055803766672,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "4e6a057ee75c1cd6ed4ed5d5b84b9e3d2c709c71eeef818ba6ccd76bafd4f959",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 199200,
+        "integrated": -23.34656699791315,
+        "momentaryMax": -22.99278278641185,
+        "shortTermMax": -22.993329944196233,
+        "loudnessRange": 1.354039824917038
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-20-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944197065,
+          "target": -23,
+          "error": 0.006670055802935337,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "86b78fad8cfbf22a0b0ba9e69d9c8e24160395b89f5abc7ab6f26176afcbada7",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 328800,
+        "integrated": -23.53688412326945,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944197065,
+        "loudnessRange": 7.334348256626974
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-3-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196272,
+          "target": -23,
+          "error": 0.0066700558037275925,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "64005281bb93a6dc25f52441a9bfad52cad9929d7db44dd5f0902a177acd4f06",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 206400,
+        "integrated": -23.407242165581632,
+        "momentaryMax": -22.992782786411876,
+        "shortTermMax": -22.993329944196272,
+        "loudnessRange": 1.392671012443703
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-4-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196304,
+          "target": -23,
+          "error": 0.006670055803695618,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "1ddd72e2559dc5fd18b143cdb9037cb0c408af49ef1bff71cce2547356f9c426",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 213600,
+        "integrated": -23.53688412326945,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944196304,
+        "loudnessRange": 1.2947974003161846
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-5-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.99332994419633,
+          "target": -23,
+          "error": 0.006670055803670749,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "8fb38288204e70b75c01f3f79d12f636f8291cd96d8edc4b0f4d795b28aecce9",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 220800,
+        "integrated": -23.407242165579607,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.99332994419633,
+        "loudnessRange": 1.3099874224305594
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-6-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196354,
+          "target": -23,
+          "error": 0.00667005580364588,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "64bc54354117d947e09ca6aaa92e4eaa1978786dd14bcd41f300e4d875d13af5",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 228000,
+        "integrated": -23.53688412326945,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944196354,
+        "loudnessRange": 1.2356213322056924
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-7-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196386,
+          "target": -23,
+          "error": 0.006670055803613906,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "66db47cf0f6f94f98e0da60529a55ce3644a7932bde2cd19558ea02db1a6047b",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 235200,
+        "integrated": -23.407242165579607,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944196386,
+        "loudnessRange": 1.4091425933174193
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-8-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196415,
+          "target": -23,
+          "error": 0.006670055803585484,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "e40b68f80fbd312fdd81810dc7a73d642b7830307b5f97e3e0f0ba06b9ed3f5a",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 242400,
+        "integrated": -23.53688412326945,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944196415,
+        "loudnessRange": 1.5805949582428092
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-10-9-24bit.wav",
+      "expected": {
+        "shortTermMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "shortTermMax",
+          "actual": -22.993329944196436,
+          "target": -23,
+          "error": 0.006670055803564168,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "26aa8668443b8b5176b50ee2bff7ae830747053788da9a1d414956a2d8f7b763",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 249600,
+        "integrated": -23.407242165579607,
+        "momentaryMax": -22.99278278641187,
+        "shortTermMax": -22.993329944196436,
+        "loudnessRange": 1.6137430835361855
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-11-24bit.wav",
+      "expected": {},
+      "checks": [
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -37.9933176442959,
+          "target": -38,
+          "error": 0.006682355704100473,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -36.99331393870268,
+          "target": -37,
+          "error": 0.006686061297322965,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -35.99334048899788,
+          "target": -36,
+          "error": 0.0066595110021197,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 18
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -34.99331608232026,
+          "target": -35,
+          "error": 0.006683917679737306,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 24
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -33.993321252922215,
+          "target": -34,
+          "error": 0.006678747077785374,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 30
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -32.993329717819314,
+          "target": -33,
+          "error": 0.0066702821806856605,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 36
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -31.993330306451327,
+          "target": -32,
+          "error": 0.0066696935486731945,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 42
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -30.99333759262377,
+          "target": -31,
+          "error": 0.00666240737622914,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 48
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -29.993322413090674,
+          "target": -30,
+          "error": 0.006677586909326294,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 54
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -28.99332084466516,
+          "target": -29,
+          "error": 0.006679155334840203,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 60
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -27.99332611003737,
+          "target": -28,
+          "error": 0.006673889962630852,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 66
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -26.9933217967607,
+          "target": -27,
+          "error": 0.006678203239300018,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 72
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -25.993326073168515,
+          "target": -26,
+          "error": 0.006673926831485488,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 78
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -24.993328319180865,
+          "target": -25,
+          "error": 0.006671680819135162,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 84
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -23.993327710026623,
+          "target": -24,
+          "error": 0.006672289973376877,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 90
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -22.993329944197196,
+          "target": -23,
+          "error": 0.006670055802803887,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 96
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -21.993328253544252,
+          "target": -22,
+          "error": 0.006671746455747751,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 102
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -20.993328955648963,
+          "target": -21,
+          "error": 0.006671044351037381,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 108
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -19.993328542472415,
+          "target": -20,
+          "error": 0.006671457527584579,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 114
+        },
+        {
+          "metric": "successiveMaxShortTerm",
+          "actual": -18.993327473147488,
+          "target": -19,
+          "error": 0.006672526852511851,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 120
+        }
+      ],
+      "sha256": "a3dedc4a23fd85111f234afc35ca73a9e94b440d0eafa6a78b66b5992b405a99",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 5760000,
+        "integrated": -24.82139869107624,
+        "momentaryMax": -18.992780212542314,
+        "shortTermMax": -18.993327473147488,
+        "loudnessRange": 18.62331518757045
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-12-24bit.wav",
+      "expected": {},
+      "checks": [
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1.1
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1.2
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1.3
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1.4
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1.5
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1.6
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1.7
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1.8
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1.9
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2.1
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2.2
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2.3
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2.4
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2.5
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2.6
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2.7
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2.8
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2.9
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.1
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.2
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.3
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.4
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.5
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.6
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.7
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.8
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.9
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.1
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.2
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.3
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.4
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.5
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.6
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.7
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.8
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.9
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.1
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.2
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.3
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.4
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.5
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.6
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.7
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.8
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.9
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.1
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.2
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.3
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.4
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.5
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.6
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.7
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.8
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.9
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.1
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.2
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.3
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.4
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.5
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.6
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.7
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.8
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.9
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.1
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.2
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.3
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.4
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.5
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.6
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.7
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.8
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.9
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.1
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.2
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.3
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.4
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.5
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.6
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.7
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.8
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.9
+        },
+        {
+          "metric": "momentaryCurrent",
+          "actual": -22.960444218751274,
+          "target": -23,
+          "error": 0.03955578124872616,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10
+        }
+      ],
+      "sha256": "d7fc88e31003553bb1329e84a8921217ae7c58045dfd620bc6b530d399a6933b",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 480000,
+        "integrated": -22.960445122709142,
+        "momentaryMax": -22.960079534456174,
+        "shortTermMax": -22.73423109402297,
+        "loudnessRange": 0.46483620568798045
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-1-24bit.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532398250476,
+          "target": -23,
+          "error": 0.006467601749523766,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "45cf95c6cd973dab326fae608d98a3ebe2dc702ac80d281ee07e9da47c7d16e0",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 67200,
+        "integrated": -25.034337727584873,
+        "momentaryMax": -22.993532398250476,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-10-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.99353238814761,
+          "target": -23,
+          "error": 0.006467611852389865,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "1e12c05373595fb6b9674940b8d414a1106d09aa563ee27280b5c44156c6fd4c",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 75840,
+        "integrated": -25.15178885957199,
+        "momentaryMax": -22.99353238814761,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-11-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147475,
+          "target": -23,
+          "error": 0.006467611852524868,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "b242927ac1a7e03ea2ba91a1308f86e3a5e2a348097e9e99a19f90a56d8f036f",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 76800,
+        "integrated": -25.034551001339757,
+        "momentaryMax": -22.993532388147475,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-12-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147642,
+          "target": -23,
+          "error": 0.006467611852357891,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "2c1d07376e2bcb76ec526ee4f86e06ecfdfbe774d2e0ffee0cc40293a0d722e3",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 77760,
+        "integrated": -25.034551001335135,
+        "momentaryMax": -22.993532388147642,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-13-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147674,
+          "target": -23,
+          "error": 0.006467611852325916,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "4a843240403af6c13a234b060e44fa082802f23fe08c0ffd8d57459e64c3f501",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 78720,
+        "integrated": -25.589662053463417,
+        "momentaryMax": -22.993532388147674,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-14-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147678,
+          "target": -23,
+          "error": 0.006467611852322364,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "0c3fb63d647192a148572e09fe7bda321c4e6785b993d5315893061d67460cc0",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 79680,
+        "integrated": -25.533623384764727,
+        "momentaryMax": -22.993532388147678,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-15-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147678,
+          "target": -23,
+          "error": 0.006467611852322364,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "8bd777888183226957e367fc9fe2476f2d46fe5c58c43e9f938e90854dc779d4",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 80640,
+        "integrated": -25.478297279438642,
+        "momentaryMax": -22.993532388147678,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-16-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147667,
+          "target": -23,
+          "error": 0.006467611852333022,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "585ddee873c3b402b18b3750fb7418e9d855071c75c20e8d884ad4b55defd139",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 81600,
+        "integrated": -25.423803144614023,
+        "momentaryMax": -22.993532388147667,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-17-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147663,
+          "target": -23,
+          "error": 0.006467611852336574,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "23ad69f204fa8238a18e2daa5a0cc4710f9002ae3a89ede8a151d7813d7a7d8a",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 82560,
+        "integrated": -26.003664008632807,
+        "momentaryMax": -22.993532388147663,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-18-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147663,
+          "target": -23,
+          "error": 0.006467611852336574,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "1a19299a88d1a0e77dbdb8f8c1f5b02b3682ac85fc35b686d6743654eeed14a8",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 83520,
+        "integrated": -26.003664008632622,
+        "momentaryMax": -22.993532388147663,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-19-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147663,
+          "target": -23,
+          "error": 0.006467611852336574,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "7b9a57cce01dcc35b89de4091db4e35ac9cf8bceb35897c29961f0cc22ec803c",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 84480,
+        "integrated": -26.003664008623414,
+        "momentaryMax": -22.993532388147663,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-2-24bit.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532387831177,
+          "target": -23,
+          "error": 0.006467612168822967,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "f29ee316201ba8c514fe57be5f4ca3440353a81d1974881836d72631470411a1",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 68160,
+        "integrated": -24.864010544544566,
+        "momentaryMax": -22.993532387831177,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-20-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147663,
+          "target": -23,
+          "error": 0.006467611852336574,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "c8b7f0dbe9e30a2fddb89a036b6fee88e94e7db73747da70193038576cbec577",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 85440,
+        "integrated": -25.478297279423362,
+        "momentaryMax": -22.993532388147663,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-3-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.99353238813787,
+          "target": -23,
+          "error": 0.006467611862131406,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "52e6688b361ae61ec2a2efa636884cbc592485fc539beacfad61e35794bbab64",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 69120,
+        "integrated": -25.511191234263197,
+        "momentaryMax": -22.99353238813787,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-4-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147703,
+          "target": -23,
+          "error": 0.006467611852297495,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "3e1d053545e49119752e013bfdfbf1f0ec22029db040ddd0bba688395788c55a",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 70080,
+        "integrated": -25.284562948189095,
+        "momentaryMax": -22.993532388147703,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-5-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147806,
+          "target": -23,
+          "error": 0.006467611852194466,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "fb5d316fd48510fab62bf395bbebd1874f52030ac00cb9639a9b93a3d18148e8",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 71040,
+        "integrated": -25.069174925374234,
+        "momentaryMax": -22.993532388147806,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-6-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147717,
+          "target": -23,
+          "error": 0.006467611852283284,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "820efc240c7a301e5f50c2a9a9f04003ecb5ec29ddda115192043835ac29f61e",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 72000,
+        "integrated": -24.864133593063453,
+        "momentaryMax": -22.993532388147717,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-7-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.99353238814766,
+          "target": -23,
+          "error": 0.006467611852340127,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "ddf6271cf0f73344a60f0a700bb438275b66193b497e6d0e7c83f4a72952dfa5",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 72960,
+        "integrated": -24.797828296593277,
+        "momentaryMax": -22.99353238814766,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-8-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147653,
+          "target": -23,
+          "error": 0.006467611852347233,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "faa7bcbbee1846341821cacc2a3b61348a4ebf759e448722a3f4228d97674df1",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 73920,
+        "integrated": -25.396522650341645,
+        "momentaryMax": -22.993532388147653,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-13-9-24bit.wav.wav",
+      "expected": {
+        "momentaryMax": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "momentaryMax",
+          "actual": -22.993532388147628,
+          "target": -23,
+          "error": 0.0064676118523721016,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "a382f6884a0fae18ba39cb0774d6cd7774f62f193c75b47ecf4f009eafd2dede",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 74880,
+        "integrated": -25.27243281311003,
+        "momentaryMax": -22.993532388147628,
+        "shortTermMax": null,
+        "loudnessRange": null
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-14-24bit.wav.wav",
+      "expected": {},
+      "checks": [
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -37.99352001416488,
+          "target": -38,
+          "error": 0.006479985835120772,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 0.8
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -36.99351627490028,
+          "target": -37,
+          "error": 0.006483725099720061,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 1.6
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -35.99354284502253,
+          "target": -36,
+          "error": 0.006457154977468349,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 2.4
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -34.993518448055795,
+          "target": -35,
+          "error": 0.006481551944204966,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.2
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -33.993523631553096,
+          "target": -34,
+          "error": 0.006476368446904246,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -32.993532105111925,
+          "target": -33,
+          "error": 0.006467894888075421,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.8
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -31.993532701074773,
+          "target": -32,
+          "error": 0.006467298925226572,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.6
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -30.99353999715432,
+          "target": -31,
+          "error": 0.0064600028456816005,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.4
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -29.993524825644588,
+          "target": -30,
+          "error": 0.006475174355411895,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.2
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -28.993523264738503,
+          "target": -29,
+          "error": 0.0064767352614971685,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -27.99352853403833,
+          "target": -28,
+          "error": 0.006471465961670475,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.8
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -26.993524226547347,
+          "target": -27,
+          "error": 0.006475773452653044,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.6
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -25.99352850670754,
+          "target": -26,
+          "error": 0.006471493292458774,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10.4
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -24.993530758155597,
+          "target": -25,
+          "error": 0.0064692418444032285,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11.2
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -23.993530152217136,
+          "target": -24,
+          "error": 0.006469847782863525,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -22.993532388147383,
+          "target": -23,
+          "error": 0.006467611852617239,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12.8
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -21.993530701449203,
+          "target": -22,
+          "error": 0.006469298550797475,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13.6
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -20.99353140580985,
+          "target": -21,
+          "error": 0.006468594190149446,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14.4
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -19.993530994268024,
+          "target": -20,
+          "error": 0.006469005731975841,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 15.2
+        },
+        {
+          "metric": "successiveMaxMomentary",
+          "actual": -18.99352992779868,
+          "target": -19,
+          "error": 0.006470072201320676,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 16
+        }
+      ],
+      "sha256": "7d6a7c9c21590b3376d15f6f8f095083d8898af99daa10dcf520b4a4d56b0ac5",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 768000,
+        "integrated": -27.341775611967773,
+        "momentaryMax": -18.99352992779868,
+        "shortTermMax": -23.080530503532916,
+        "loudnessRange": 13.604489118073062
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-15-24bit.wav.wav",
+      "expected": {
+        "truePeak": {
+          "value": -6,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2
+        }
+      },
+      "checks": [
+        {
+          "metric": "truePeak",
+          "actual": -6.0002649391173914,
+          "target": -6,
+          "error": -0.0002649391173914495,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2,
+          "pass": true
+        }
+      ],
+      "sha256": "86f8a70eca1bc77623dd20a4acbadbc449711cd348615d852e3b0689827bea55",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 153600,
+        "integrated": -2.6988090120346118,
+        "momentaryMax": -2.6486009897841405,
+        "shortTermMax": -2.648600990124779,
+        "loudnessRange": 0.08783940263981282,
+        "truePeak": -6.0002649391173914
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-16-24bit.wav.wav",
+      "expected": {
+        "truePeak": {
+          "value": -6,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2
+        }
+      },
+      "checks": [
+        {
+          "metric": "truePeak",
+          "actual": -6.000072194972418,
+          "target": -6,
+          "error": -0.00007219497241806039,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2,
+          "pass": true
+        }
+      ],
+      "sha256": "9843c6fbc7c14d1bc5902ab23474851d766fd2ea92be5c45ab78ccd7e8a99ecd",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 153600,
+        "integrated": -2.6988100834990476,
+        "momentaryMax": -2.6486020603906066,
+        "shortTermMax": -2.648602063947165,
+        "loudnessRange": 0.08785097143511722,
+        "truePeak": -6.000072194972418
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-17-24bit.wav.wav",
+      "expected": {
+        "truePeak": {
+          "value": -6,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2
+        }
+      },
+      "checks": [
+        {
+          "metric": "truePeak",
+          "actual": -6.000184862715855,
+          "target": -6,
+          "error": -0.00018486271585516079,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2,
+          "pass": true
+        }
+      ],
+      "sha256": "b4e7377b6c5c0c30bf68752f6d02f7b23909e40aed083a25902a550e0e1e2265",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 153600,
+        "integrated": -2.702062227392953,
+        "momentaryMax": -2.6518534082392495,
+        "shortTermMax": -2.6518542229468354,
+        "loudnessRange": 0.08786255940633536,
+        "truePeak": -6.000184862715855
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-18-24bit.wav.wav",
+      "expected": {
+        "truePeak": {
+          "value": -6,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2
+        }
+      },
+      "checks": [
+        {
+          "metric": "truePeak",
+          "actual": -6.000116574760646,
+          "target": -6,
+          "error": -0.00011657476064641514,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2,
+          "pass": true
+        }
+      ],
+      "sha256": "d5fbe4854e93ef2a5a23260b522bdaa44bc739b69597bf751de919f11641d161",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 153600,
+        "integrated": -2.711950585629334,
+        "momentaryMax": -2.6617425419347334,
+        "shortTermMax": -2.6617425702402606,
+        "loudnessRange": 0.08786743384990459,
+        "truePeak": -6.000116574760646
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-19-24bit.wav.wav",
+      "expected": {
+        "truePeak": {
+          "value": 3,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2
+        }
+      },
+      "checks": [
+        {
+          "metric": "truePeak",
+          "actual": 3.009910890295251,
+          "target": 3,
+          "error": 0.00991089029525094,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2,
+          "pass": true
+        }
+      ],
+      "sha256": "31bda52dc66bb63aa0d04b2e5a1e6a4332296fa5635570469b2863d05a06d309",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 153600,
+        "integrated": 6.311172916968453,
+        "momentaryMax": 6.361380937635335,
+        "shortTermMax": 6.361380934091158,
+        "loudnessRange": 0.0878509671357035,
+        "truePeak": 3.009910890295251
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-2-16bit.wav",
+      "expected": {
+        "integrated": {
+          "value": -33,
+          "tolerance": 0.1
+        },
+        "momentaryMax": {
+          "value": -33,
+          "tolerance": 0.1
+        },
+        "shortTermMax": {
+          "value": -33,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "integrated",
+          "actual": -32.95985890772068,
+          "target": -33,
+          "error": 0.04014109227932039,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        },
+        {
+          "metric": "momentaryMax",
+          "actual": -32.959350345251316,
+          "target": -33,
+          "error": 0.04064965474868387,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        },
+        {
+          "metric": "shortTermMax",
+          "actual": -32.95980455318841,
+          "target": -33,
+          "error": 0.04019544681158749,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "7c9399188aed09980c76a67adc36b33f2d61c3e0c8457d83f7bf879122534ce3",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 960000,
+        "integrated": -32.95985890772068,
+        "momentaryMax": -32.959350345251316,
+        "shortTermMax": -32.95980455318841,
+        "loudnessRange": 0.000049401516420743974
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-20-24bit.wav.wav",
+      "expected": {
+        "truePeak": {
+          "value": 0,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2
+        }
+      },
+      "checks": [
+        {
+          "metric": "truePeak",
+          "actual": -0.11698250546282757,
+          "target": 0,
+          "error": -0.11698250546282757,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2,
+          "pass": true
+        }
+      ],
+      "sha256": "a2df8791198781579a25e0437008ce9b1a48b13605a8b71886a360c4ceed16e4",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 153604,
+        "integrated": -2.7016676256779606,
+        "momentaryMax": -2.648950984312803,
+        "shortTermMax": -2.651468833144653,
+        "loudnessRange": 0.08782059511724549,
+        "truePeak": -0.11698250546282757
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-2011-8_seq-3342-6-24bit-v02.wav",
+      "expected": {
+        "integrated": {
+          "value": -23,
+          "tolerance": 0.1
+        },
+        "loudnessRange": {
+          "value": 15,
+          "tolerance": 1
+        }
+      },
+      "checks": [
+        {
+          "metric": "integrated",
+          "actual": -22.99782024105933,
+          "target": -23,
+          "error": 0.00217975894067024,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        },
+        {
+          "metric": "loudnessRange",
+          "actual": 15.008053000468735,
+          "target": 15,
+          "error": 0.008053000468734695,
+          "lowerTolerance": 1,
+          "upperTolerance": 1,
+          "pass": true
+        }
+      ],
+      "sha256": "13cb1c1ca8496c868a768bd1afc5e6a75841235000b68285e895bce62c2bdc6a",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 11825152,
+        "integrated": -22.99782024105933,
+        "momentaryMax": -14.82174891656712,
+        "shortTermMax": -17.942881895420957,
+        "loudnessRange": 15.008053000468735
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-21-24bit.wav.wav",
+      "expected": {
+        "truePeak": {
+          "value": 0,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2
+        }
+      },
+      "checks": [
+        {
+          "metric": "truePeak",
+          "actual": -0.1143196272860866,
+          "target": 0,
+          "error": -0.1143196272860866,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2,
+          "pass": true
+        }
+      ],
+      "sha256": "fc508ae04cb6d1dbcb286d6cdffe8e81a87effa9ba7bb267c17a5807d5b273d3",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 153604,
+        "integrated": -2.7016556009944295,
+        "momentaryMax": -2.6489935157317186,
+        "shortTermMax": -2.6514749413906142,
+        "loudnessRange": 0.08782159218033625,
+        "truePeak": -0.1143196272860866
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-22-24bit.wav.wav",
+      "expected": {
+        "truePeak": {
+          "value": 0,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2
+        }
+      },
+      "checks": [
+        {
+          "metric": "truePeak",
+          "actual": -0.11578923408867109,
+          "target": 0,
+          "error": -0.11578923408867109,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2,
+          "pass": true
+        }
+      ],
+      "sha256": "d238255454a091b49592b25355738e200f59868c0804be5427c901ed10b3a910",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 153604,
+        "integrated": -2.7016440793285463,
+        "momentaryMax": -2.6490419681771233,
+        "shortTermMax": -2.651480253933114,
+        "loudnessRange": 0.08782378353810882,
+        "truePeak": -0.11578923408867109
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-23-24bit.wav.wav",
+      "expected": {
+        "truePeak": {
+          "value": 0,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2
+        }
+      },
+      "checks": [
+        {
+          "metric": "truePeak",
+          "actual": -0.11431847454609387,
+          "target": 0,
+          "error": -0.11431847454609387,
+          "lowerTolerance": 0.4,
+          "upperTolerance": 0.2,
+          "pass": true
+        }
+      ],
+      "sha256": "c7243e22970b82e020b45241c92d210cbf47217ccc967f014787a5f6400fa8a3",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 153604,
+        "integrated": -2.701636736940812,
+        "momentaryMax": -2.6489638322685125,
+        "shortTermMax": -2.651470870612263,
+        "loudnessRange": 0.08782511526424264,
+        "truePeak": -0.11431847454609387
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-3-16bit-v02.wav",
+      "expected": {
+        "integrated": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "integrated",
+          "actual": -23.014141652725,
+          "target": -23,
+          "error": -0.014141652725001563,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "1fced6ac2397d4337257185908bd49bb18314f441a0daf0ef602f671254d9efb",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 3840000,
+        "integrated": -23.014141652725,
+        "momentaryMax": -22.99318514507318,
+        "shortTermMax": -22.993517849629068,
+        "loudnessRange": 12.998090347256646
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-4-16bit-v02.wav",
+      "expected": {
+        "integrated": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "integrated",
+          "actual": -23.014141652725467,
+          "target": -23,
+          "error": -0.014141652725466969,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "514a6edd342d20c999d30062f0371d3f33ca86aa668ed3606484564db8dbdf93",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 4800000,
+        "integrated": -23.014141652725467,
+        "momentaryMax": -22.993185145073195,
+        "shortTermMax": -22.99351784962915,
+        "loudnessRange": 12.998090347262252
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-5-16bit-v02.wav",
+      "expected": {
+        "integrated": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [
+        {
+          "metric": "integrated",
+          "actual": -22.97902914100297,
+          "target": -23,
+          "error": 0.02097085899702833,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        }
+      ],
+      "sha256": "7acd129ddebb1935980585742075ad4aa82abe1147f7ce8abd28346b49561e61",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 2884800,
+        "integrated": -22.97902914100297,
+        "momentaryMax": -19.99296666500297,
+        "shortTermMax": -19.993168968480013,
+        "loudnessRange": 6.001408982218713
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-6-5channels-16bit.wav",
+      "expected": {
+        "integrated": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [],
+      "sha256": "bd6ba138931b7450abf83044b2645fd6ef4c8dafc170758b8a2f32cbaa7ef58b",
+      "status": "unsupported",
+      "error": "WAV encoding unsupported by built-in codec."
+    },
+    {
+      "file": "seq-3341-6-6channels-WAVEEX-16bit.wav",
+      "expected": {
+        "integrated": {
+          "value": -23,
+          "tolerance": 0.1
+        }
+      },
+      "checks": [],
+      "sha256": "c7a5b24cfedfd9c781beafd05547e9dd90118ab6a78c4ccf181a02ae85160fc0",
+      "status": "unsupported",
+      "error": "WAV encoding unsupported by built-in codec."
+    },
+    {
+      "file": "seq-3341-7_seq-3342-5-24bit.wav",
+      "expected": {
+        "integrated": {
+          "value": -23,
+          "tolerance": 0.1
+        },
+        "loudnessRange": {
+          "value": 5,
+          "tolerance": 1
+        }
+      },
+      "checks": [
+        {
+          "metric": "integrated",
+          "actual": -22.986158804852273,
+          "target": -23,
+          "error": 0.013841195147726637,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true
+        },
+        {
+          "metric": "loudnessRange",
+          "actual": 4.9789357409331885,
+          "target": 5,
+          "error": -0.02106425906681153,
+          "lowerTolerance": 1,
+          "upperTolerance": 1,
+          "pass": true
+        }
+      ],
+      "sha256": "dc48d551d72c8060a4f8ba9e09d247cbd5ba48e3ddebd9ce2f9af0b204fc1293",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 1343998,
+        "integrated": -22.986158804852273,
+        "momentaryMax": -19.423607258869705,
+        "shortTermMax": -20.99057218008325,
+        "loudnessRange": 4.9789357409331885
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3341-9-24bit.wav",
+      "expected": {},
+      "checks": [
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.98627952950979,
+          "target": -23,
+          "error": 0.013720470490209635,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.98626776858268,
+          "target": -23,
+          "error": 0.013732231417318275,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 3.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 4.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 5.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 6.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 7.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 8.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 9.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 10.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 11.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 12.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 13.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14.1
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14.2
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14.3
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14.4
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14.5
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14.6
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14.7
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14.8
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 14.9
+        },
+        {
+          "metric": "shortTermCurrent",
+          "actual": -22.986267768582696,
+          "target": -23,
+          "error": 0.013732231417304064,
+          "lowerTolerance": 0.1,
+          "upperTolerance": 0.1,
+          "pass": true,
+          "time": 15
+        }
+      ],
+      "sha256": "8157f3e794eac577b6007586fe47f51db8bfdc636729e6a773928c72791ef0f2",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 720000,
+        "integrated": -22.994741154322934,
+        "momentaryMax": -19.992781109630666,
+        "shortTermMax": -22.986218852244235,
+        "loudnessRange": 0
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3342-1-16bit.wav",
+      "expected": {
+        "loudnessRange": {
+          "value": 10,
+          "tolerance": 1
+        }
+      },
+      "checks": [
+        {
+          "metric": "loudnessRange",
+          "actual": 10.00110548833338,
+          "target": 10,
+          "error": 0.001105488333379867,
+          "lowerTolerance": 1,
+          "upperTolerance": 1,
+          "pass": true
+        }
+      ],
+      "sha256": "0b31a4813276699b5043e8fe7f93c6d7c4df3a7eacdd1a2436f0c3ee6b00e39b",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 1920000,
+        "integrated": -22.589670945416117,
+        "momentaryMax": -19.992683806863567,
+        "shortTermMax": -19.993131251240086,
+        "loudnessRange": 10.00110548833338
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3342-2-16bit.wav",
+      "expected": {
+        "loudnessRange": {
+          "value": 5,
+          "tolerance": 1
+        }
+      },
+      "checks": [
+        {
+          "metric": "loudnessRange",
+          "actual": 4.9993734051559695,
+          "target": 5,
+          "error": -0.0006265948440304925,
+          "lowerTolerance": 1,
+          "upperTolerance": 1,
+          "pass": true
+        }
+      ],
+      "sha256": "e1b3c64e26ffe1c77b60072545ca41b45d0a2b599ec7e3333592f12000fdde0d",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 1920000,
+        "integrated": -16.810668865064944,
+        "momentaryMax": -14.993624524870805,
+        "shortTermMax": -14.993799732174741,
+        "loudnessRange": 4.9993734051559695
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3342-3-16bit.wav",
+      "expected": {
+        "loudnessRange": {
+          "value": 20,
+          "tolerance": 1
+        }
+      },
+      "checks": [
+        {
+          "metric": "loudnessRange",
+          "actual": 19.995064067783936,
+          "target": 20,
+          "error": -0.004935932216064032,
+          "lowerTolerance": 1,
+          "upperTolerance": 1,
+          "pass": true
+        }
+      ],
+      "sha256": "6e759ba7b061f28733a5a5081301f08df94c5447c28742c4f5fe85abe9aac677",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 1920000,
+        "integrated": -20.02557225443272,
+        "momentaryMax": -19.992744159376535,
+        "shortTermMax": -19.99313929902228,
+        "loudnessRange": 19.995064067783936
+      },
+      "status": "analyzed"
+    },
+    {
+      "file": "seq-3342-4-16bit.wav",
+      "expected": {
+        "loudnessRange": {
+          "value": 15,
+          "tolerance": 1
+        }
+      },
+      "checks": [
+        {
+          "metric": "loudnessRange",
+          "actual": 14.99927393773104,
+          "target": 15,
+          "error": -0.0007260622689599927,
+          "lowerTolerance": 1,
+          "upperTolerance": 1,
+          "pass": true
+        }
+      ],
+      "sha256": "6445a25325fb53fbbf03c0296bdb019962df9254468795b4c6fe46ab00bb4f2b",
+      "actual": {
+        "sampleRate": 48000,
+        "channels": 2,
+        "frames": 4800000,
+        "integrated": -24.49174908011794,
+        "momentaryMax": -19.992789746523783,
+        "shortTermMax": -19.993145377833713,
+        "loudnessRange": 14.99927393773104
+      },
+      "status": "analyzed"
+    }
+  ]
+}

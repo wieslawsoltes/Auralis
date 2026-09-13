@@ -1,0 +1,40 @@
+{
+  "release": "0.3.0",
+  "regression": {
+    "tests": 54,
+    "passed": 54,
+    "failed": 0,
+    "skipped": 0
+  },
+  "typeDeclarations": "pass; no skipLibCheck",
+  "browser": {
+    "origin": "http://terminal.local:4173/",
+    "renderer": "Canvas 2D",
+    "executed": [
+      "PCM selection and copy/paste",
+      "short replacement clamps fades",
+      "numeric EQ +3 dB; one undo step",
+      "numeric envelope insertion",
+      "clip timeline 12.34567 seconds",
+      "marker editing",
+      "spectral gate and attenuation",
+      "fractional frequency range 5026.274713839752\u201312476.84703433923 Hz",
+      "spectral overlay clears on Montage",
+      "derived clip copy \u2192 Undo \u2192 paste",
+      "floating/docked tools",
+      "keyboard divider resize",
+      "editing/mastering layouts",
+      "command search",
+      "custom marker shortcut",
+      "playback"
+    ],
+    "unqualified": [
+      "physical GPU",
+      "audio-interface/microphone loopback",
+      "mobile browser",
+      "two-account hosted collaboration",
+      "production distributed scale"
+    ]
+  },
+  "priorEvidence": "Other JSON files in this directory retain the 0.2 engine qualification results."
+}

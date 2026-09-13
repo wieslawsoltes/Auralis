@@ -1,0 +1,18 @@
+{
+  "release": "0.2.0",
+  "runtime": "v24.19.0",
+  "tests": 51,
+  "passed": 51,
+  "failed": 0,
+  "skipped": 0,
+  "nativeCompanionsBuilt": true,
+  "typeDeclarations": "pass",
+  "productionBuild": "pass",
+  "browserOfflineDiagnostic": {
+    "frames": 48000,
+    "sampleRate": 48000,
+    "frequency": 997,
+    "samplePeakRoundedDbFS": -20,
+    "integratedRoundedLUFS": -20
+  }
+}

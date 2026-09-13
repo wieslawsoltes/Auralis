@@ -1,0 +1,31 @@
+{
+  "name": "@auralis/audio",
+  "version": "0.4.0",
+  "description": "Standalone planar-PCM DSP, AudioWorklet playback, analysis and WAV codecs",
+  "type": "module",
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "default": "./index.js"
+    },
+    "./dsp": "./dsp.js",
+    "./wav": "./wav.js",
+    "./analysis": "./analysis.js",
+    "./worklet": "./worklet.js",
+    "./worker": "./worker.js",
+    "./restoration": "./restoration.js",
+    "./streaming": "./streaming.js",
+    "./authoring": "./authoring.js",
+    "./chain-config": "./chain-config.js",
+    "./spectral-mask": "./spectral-mask.js",
+    "./qualification-worklet": "./qualification-worklet.js"
+  },
+  "files": [
+    "*.js",
+    "*.d.ts",
+    "README.md",
+    "LICENSE"
+  ]
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "file": "riff-96k.wav",
+    "parsed": true,
+    "channels": 1,
+    "sample_rate": 96000,
+    "objects": 1,
+    "uids": 1
+  },
+  {
+    "file": "bw64-48k.wav",
+    "parsed": true,
+    "channels": 12,
+    "sample_rate": 48000,
+    "objects": 12,
+    "uids": 12
+  },
+  {
+    "file": "riff-48k.wav",
+    "parsed": true,
+    "channels": 12,
+    "sample_rate": 48000,
+    "objects": 12,
+    "uids": 12
+  }
+]

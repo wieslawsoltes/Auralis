@@ -1,0 +1,14 @@
+{
+  "source": "isolated Chrome browser UI delivery export",
+  "bytes": 13824068,
+  "sha256": "df9393fd4ab564280733f899233424bbc74cac31a6bb1db3c3ef37c7f47cf62a",
+  "formatTag": 65534,
+  "channels": 2,
+  "sampleRate": 48000,
+  "bits": 24,
+  "frames": 2304000,
+  "reportedIntegrated": -16.097119761651115,
+  "reportedTruePeak": -1.0099995320270296,
+  "peakPass": true,
+  "loudnessPass": false
+}

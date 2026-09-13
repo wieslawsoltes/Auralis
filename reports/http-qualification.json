@@ -1,0 +1,45 @@
+{
+  "kind": "Local standalone HTTP and disk qualification",
+  "date": "2026-09-13T04:29:16.071Z",
+  "node": "v24.19.0",
+  "projects": 8,
+  "workers": 32,
+  "productionQualification": false,
+  "limitations": [
+    "Single local server and one local identity",
+    "No power-loss durability test",
+    "No physical GPU or audio interface",
+    "Server RSS unavailable from the isolated process namespace"
+  ],
+  "uniqueCommits": 512,
+  "sse": {
+    "clients": 32,
+    "initialEvents": 32,
+    "updatedEvents": 32,
+    "disconnectSurvived": true
+  },
+  "audio": {
+    "bytes": 4800058,
+    "sha256": "6a41b7c0eb13a5111084f2ea17050729f3daf0b57324bd329e5dbf07ce525618",
+    "crossChunkRangeVerified": true
+  },
+  "restart": {
+    "signal": "SIGKILL",
+    "acknowledgedWritesPreserved": true,
+    "integrityCheck": "ok"
+  },
+  "soak": {
+    "durationMs": 60011,
+    "operations": 144694,
+    "peakServerRSS": null
+  },
+  "requests": 146237,
+  "retries": 931,
+  "latencyMs": {
+    "p50": 2.512345999999525,
+    "p95": 8.250396999999793,
+    "p99": 28.0824500000017,
+    "max": 340.156453
+  },
+  "status": "passed"
+}
